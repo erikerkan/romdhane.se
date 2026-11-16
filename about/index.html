@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Erik</title>
+    <meta name="description" content="About Erik, co-founder of Fluencify.">
+    <meta name="theme-color" content="#f5f4f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About · Erik">
+    <meta property="og:description" content="Co-founder of Fluencify, New York.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About · Erik">
+    <meta name="twitter:description" content="Co-founder of Fluencify, New York.">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "AboutPage",
+                "@id": "/about/#page",
+                "url": "/about/",
+                "name": "About · Erik",
+                "mainEntity": {
+                    "@id": "/#person"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "/#person",
+                "name": "Erik",
+                "url": "/",
+                "email": "mailto:erik@fluencify.io",
+                "worksFor": {
+                    "@id": "/#organization"
+                },
+                "jobTitle": "Co-founder",
+                "sameAs": [
+                    "https://www.linkedin.com/in/erik-romdhane-2149961b7/",
+                    "https://github.com/erikerkan"
+                ]
+            },
+            {
+                "@type": "Organization",
+                "@id": "/#organization",
+                "name": "Fluencify AB",
+                "alternateName": "Fluencify",
+                "url": "https://fluencify.io/"
+            }
+        ]
+    }
+    </script>
+
+    <script type="speculationrules">
+    { "prerender": [{ "urls": ["/", "/graveyard/"], "eagerness": "moderate" }] }
+    </script>
+
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='fb' x1='0' y1='0' x2='0' y2='1'><stop class='s1' offset='0' stop-color='%23c6c2ba'/><stop class='s2' offset='1' stop-color='%23a39f97'/></linearGradient><linearGradient id='fl' x1='0' y1='0' x2='0' y2='1'><stop class='l1' offset='0' stop-color='%23eeebe5'/><stop class='l2' offset='1' stop-color='%23d5d2cb'/></linearGradient></defs><style>@media(prefers-color-scheme:light){.tile{fill:%23edeae3}.s1{stop-color:%23a49f97}.s2{stop-color:%23827e76}.l1{stop-color:%23d8d5ce}.l2{stop-color:%23b9b6af}.hl{fill:%23e7e4dd}}</style><rect class='tile' width='32' height='32' rx='7' fill='%23111110'/><g transform='rotate(-3 16 17)'><path d='M6 11.2 Q6 9.6 7.6 9.6 L11.2 9.6 Q12.3 9.6 12.8 10.6 L13.3 11.6 L24.4 11.6 Q26 11.6 26 13.2 L26 23 Q26 24.6 24.4 24.6 L7.6 24.6 Q6 24.6 6 23 Z' fill='url(%23fb)'/><rect x='8.6' y='13.4' width='3.4' height='5' rx='1' fill='%23edeae4' transform='rotate(-5 10.3 16)'/><rect x='13.1' y='12.8' width='3.4' height='5.4' rx='1' fill='%233c3934' transform='rotate(3 14.8 15.5)'/><rect x='17.7' y='13.5' width='3.4' height='5' rx='1' fill='%23dbd8d1' transform='rotate(-3 19.4 16)'/><path d='M6 16.6 Q7 16.1 8 16.3 L24 16.3 Q26 16.2 26 18 L26 23 Q26 24.6 24.4 24.6 L7.6 24.6 Q6 24.6 6 23 Z' fill='url(%23fl)' opacity='0.94'/><rect x='6.4' y='16.4' width='19.2' height='0.7' rx='0.35' class='hl' fill='%23f8f6f1' opacity='0.85' transform='rotate(-0.3 16 16.7)'/></g></svg>">
+
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+
+    <style>
+        :root {
+            --text: #1a1a1a;
+            --text-secondary: #7a756d;
+            --text-tertiary: #9a9590;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; }
+        ::selection { background: rgba(193,154,73,0.3); }
+
+        body {
+            background: #f5f4f0;
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", system-ui, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 1.5rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            max-width: 30rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Entrance, same choreography as the homepage. */
+        .hero, .bio, .contact-nav, .back-row {
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .hero { animation-delay: 0.1s; }
+        .wake-wrap { animation: riseIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards; }
+        .wake { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards; }
+        .bio { animation-delay: 0.45s; }
+        .contact-nav { animation-delay: 0.6s; }
+        .back-row { animation-delay: 0.7s; }
+
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes riseIn { from { transform: translateY(12px); } }
+        @keyframes fadeIn { from { opacity: 0; } }
+        @keyframes vt-out { to { opacity: 0; transform: translateY(-8px); } }
+        @keyframes vt-in { from { opacity: 0; transform: translateY(8px); } }
+
+        .hero-name {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", system-ui, "Helvetica Neue", Arial, sans-serif;
+            font-size: clamp(2.5rem, 6.5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-sub {
+            margin-top: 0.75rem;
+            font-size: 1rem;
+            color: var(--text-tertiary);
+            letter-spacing: 0.015em;
+        }
+
+        /* ASCII wake: the portrait drawn in ink dots. The pointer drags a
+           wake of characters through it; a press sends a ring out. */
+        .wake-wrap {
+            margin-top: 2.25rem;
+            display: flex;
+            justify-content: center;
+        }
+        .wake {
+            display: block;
+            width: 336px;
+            height: 420px;
+            color: var(--text);
+            cursor: crosshair;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .wake:focus-visible { outline: 2px solid var(--text-tertiary); outline-offset: 8px; border-radius: 4px; }
+
+        .bio {
+            margin-top: 3.25rem;
+            /* optical centering: half the ragged-right width */
+            translate: 8px 0;
+        }
+        .bio p + p {
+            margin-top: 1rem;
+        }
+        .bio .body-text {
+            font-size: 1rem;
+            line-height: 1.62;
+            color: var(--text-secondary);
+            max-width: 26.5rem;
+            text-align: left;
+            /* pretty, not balance: balance equalizes line lengths, which
+               shrinks short paragraphs well under the measure — the bio
+               should FILL its width and only avoid orphans */
+            text-wrap: pretty;
+        }
+        .bio a {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            text-decoration-color: var(--text-tertiary);
+            transition: text-decoration-color 0.25s ease;
+        }
+        .bio a:hover { text-decoration-color: var(--text); }
+
+        .contact-nav {
+            margin-top: 2.75rem;
+            display: flex;
+            gap: 2rem;
+        }
+        .contact-nav a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.3s ease;
+        }
+        .contact-nav a:hover, .contact-nav a:focus-visible { color: var(--text); }
+
+        .back-row { margin-top: 3.25rem; }
+        .back {
+            display: inline-block;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .back:hover, .back:focus-visible {
+            color: var(--text);
+            transform: translateX(-3px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #e8e6e1;
+                --text-secondary: #9a9590;
+                --text-tertiary: #6e6a64;
+            }
+            body { background: #111110; }
+            ::selection { background: rgba(235,200,120,0.22); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero, .bio, .contact-nav, .back-row, .wake-wrap, .wake {
+                opacity: 1; transform: none; animation: none;
+            }
+            .contact-nav a, .back, .bio a { transition: none; }
+            .back:hover { transform: none; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 2.5rem 1.25rem; }
+            .hero-name { font-size: 2.25rem; }
+            .wake-wrap { margin-top: 1.75rem; }
+            .wake { width: 264px; height: 330px; }
+            .bio { margin-top: 2.5rem; }
+            .contact-nav { margin-top: 2.25rem; gap: 1.5rem; }
+            .back-row { margin-top: 2.75rem; }
+        }
+
+        /* Site-wide details: soft cross-page transitions, typographic wrapping.
+           hero-name/hero-sub share view-transition-names with the homepage,
+           so the name glides between the two pages. */
+        @view-transition { navigation: auto; }
+        @media (prefers-reduced-motion: no-preference) {
+            ::view-transition-old(root) { animation: vt-out 0.25s cubic-bezier(0.16, 1, 0.3, 1) both; }
+            ::view-transition-new(root) { animation: vt-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both; }
+            .hero-name { view-transition-name: hero-name; }
+            .hero-sub { view-transition-name: hero-sub; }
+            ::view-transition-group(hero-name),
+            ::view-transition-group(hero-sub) {
+                animation-duration: 0.3s;
+                animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            }
+        }
+        h1, h2, h3 { text-wrap: balance; }
+        p { text-wrap: pretty; }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="hero">
+            <h1 class="hero-name">Erik</h1>
+            <p class="hero-sub">Co-founder of Fluencify, New York</p>
+        </header>
+
+        <div class="wake-wrap">
+            <canvas class="wake" tabindex="0" role="img" data-src="me.png" data-face="0.334,0.316,0.829,0.712"
+                    aria-label="Portrait of Erik drawn in dots. Move across it and a wake of characters follows the pointer, then cools back to dots; press to send a ring out."></canvas>
+        </div>
+
+        <section class="bio">
+            <p class="body-text">
+                I started out making content: 900k+ followers on Instagram
+                and a lot of videos for brands. In 2021 I co-founded
+                BrandPlant, and in 2024 we exited. It got
+                <a href="/graveyard/">a headstone</a> anyway.
+            </p>
+            <p class="body-text">
+                These days I'm building
+                <a href="https://fluencify.io" target="_blank" rel="noopener noreferrer">Fluencify</a>
+                with Sam and Isaac. Brands find out what content to make,
+                20,000+ creators make it, and we read the results so the next
+                round lands better. Backed by byFounders, Wave and a handful
+                of great angels. We're
+                <a href="https://fluencify.io/labs/careers" target="_blank" rel="noopener noreferrer">hiring</a>.
+            </p>
+            <p class="body-text">
+                Studied business at the Stockholm School of Economics and
+                engineering mathematics at KTH.
+            </p>
+        </section>
+
+        <nav class="contact-nav" aria-label="Contact">
+            <a href="mailto:erik@fluencify.io">Email</a>
+            <a href="https://www.linkedin.com/in/erik-romdhane-2149961b7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/erikerkan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+
+        <nav class="back-row" aria-label="Back">
+            <a class="back" href="/">← Back home</a>
+        </nav>
+    </main>
+
+    <script>
+        // ASCII wake (after Bencho's component of the same name), with the
+        // portrait where the cube was. The photo is cut out of its
+        // background and laid on a character grid: one ink dot per cell,
+        // bigger where the photo is darker, nothing where there is no
+        // person. Every cell carries heat. The pointer warms the cells it
+        // passes, more and wider the faster it moves, and a warm cell stops
+        // being a dot and becomes a character, denser the hotter it is.
+        // Heat drains over about a second, so the wake cools back to dots
+        // behind the hand. A press sends a ring out through the portrait.
+        (() => {
+            const cv = document.querySelector('.wake');
+            if (!cv) return;
+            const ctx = cv.getContext('2d');
+            const calm = matchMedia('(prefers-reduced-motion: reduce)');
+            const RAMP = ':-=+*#%@';
+            const SIZE = 7, CW = SIZE * 0.62, CH = SIZE * 0.78;    // glyph size and its cell
+            const REACH = 56, REST = 32, TRAIL = 1.2, PULL = 4.5;
+            const SKIN = 0.66, LOCAL = 1.05;                       // portrait tone: how light skin sits, local contrast
+            const MONO = 'ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace';
+            const FONTS = ['500 ' + SIZE + 'px ' + MONO, '700 ' + (SIZE + 0.5) + 'px ' + MONO];
+
+            let W = 0, H = 0, k = 1, cells = [], ink = '#1a1a1a';
+            let px = 0, py = 0, lx = 0, ly = 0, has = false, speed = 0;
+            let rings = [], demo = null, raf = 0, last = 0;
+            const photo = new Image();
+
+            function build() {
+                const box = cv.getBoundingClientRect();
+                W = box.width; H = box.height;
+                if (!W || !H || !photo.naturalWidth) return;
+                k = Math.min(window.devicePixelRatio || 1, 2);
+                cv.width = Math.round(W * k); cv.height = Math.round(H * k);
+                ink = getComputedStyle(cv).color;
+
+                // one photo pixel per cell
+                const cols = Math.floor(W / CW), rows = Math.floor(H / CH), n = cols * rows;
+                const ox = (W - cols * CW) / 2, oy = (H - rows * CH) / 2;
+                const t = document.createElement('canvas');
+                t.width = cols; t.height = rows;
+                const tc = t.getContext('2d', { willReadFrequently: true });
+                tc.imageSmoothingQuality = 'high';
+                tc.drawImage(photo, 0, 0, cols, rows);
+                const d = tc.getImageData(0, 0, cols, rows).data;
+                const lum = new Float32Array(n), al = new Float32Array(n);
+                for (let i = 0; i < n; i++) {
+                    al[i] = d[i * 4 + 3] / 255;
+                    lum[i] = (0.2126 * d[i * 4] + 0.7152 * d[i * 4 + 1] + 0.0722 * d[i * 4 + 2]) / 255;
+                }
+
+                // tone: stretch to the range the person actually covers, then
+                // push each cell away from its neighbourhood's average, so
+                // eyes, brows and jaw read at this resolution
+                const seen = [];
+                for (let i = 0; i < n; i++) if (al[i] > 0.5) seen.push(lum[i]);
+                if (!seen.length) return;
+                seen.sort((p, q) => p - q);
+                const lo = seen[Math.floor(seen.length * 0.02)], hi = seen[Math.floor(seen.length * 0.98)], span = Math.max(0.05, hi - lo);
+                // expose for the face, not the clothes: pick the curve that puts
+                // the face's median tone at SKIN, whatever the shirt and hair do
+                let gamma = 0.62;
+                const fb = (cv.dataset.face || '').split(',').map(Number);
+                if (fb.length === 4 && fb.every(isFinite)) {
+                    const skin = [];
+                    for (let j = Math.floor(fb[1] * rows); j < Math.min(rows, Math.ceil(fb[3] * rows)); j++)
+                        for (let i = Math.floor(fb[0] * cols); i < Math.min(cols, Math.ceil(fb[2] * cols)); i++)
+                            if (i >= 0 && j >= 0 && al[j * cols + i] > 0.5) skin.push(lum[j * cols + i]);
+                    if (skin.length > 8) {
+                        skin.sort((p, q) => p - q);
+                        const mid = Math.min(0.97, Math.max(0.03, (skin[skin.length >> 1] - lo) / span));
+                        gamma = Math.min(2.6, Math.max(0.35, Math.log(SKIN) / Math.log(mid)));
+                    }
+                }
+                const near = new Float32Array(n), B = 4;
+                for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+                    let sum = 0, wt = 0;
+                    for (let v = Math.max(0, j - B); v <= Math.min(rows - 1, j + B); v++)
+                        for (let u = Math.max(0, i - B); u <= Math.min(cols - 1, i + B); u++) {
+                            const a = al[v * cols + u];
+                            sum += lum[v * cols + u] * a; wt += a;
+                        }
+                    near[j * cols + i] = wt ? sum / wt : 0;
+                }
+
+                cells = [];
+                for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+                    const q = j * cols + i;
+                    if (al[q] < 0.5) continue;
+                    // drop stray wisps: a cell needs company to count as part of the figure
+                    let mates = 0;
+                    for (let v = j - 1; v <= j + 1; v++) for (let u = i - 1; u <= i + 1; u++)
+                        if (u >= 0 && v >= 0 && u < cols && v < rows && al[v * cols + u] >= 0.5) mates++;
+                    if (mates < 5) continue;
+                    // lift the midtones (skin) clear of the darks (hair), then sharpen locally
+                    const tone = (x) => Math.pow(Math.min(1, Math.max(0, (x - lo) / span)), gamma);
+                    let v = tone(lum[q]);
+                    v += LOCAL * (v - tone(near[q]));
+                    const dark = 1 - Math.min(1, Math.max(0, v));
+                    // the bust fades out at the bottom and sides instead of ending in a cut
+                    const fy = Math.min(1, (rows - 0.5 - j) / (rows * 0.17));
+                    const fx = Math.min(1, (i + 0.5) / (cols * 0.09), (cols - 0.5 - i) / (cols * 0.09));
+                    const fade = fy * fy * (3 - 2 * fy) * fx * fx * (3 - 2 * fx);
+                    const r = CW * (0.13 + 0.38 * Math.pow(dark, 1.15)) * fade;
+                    if (r < 0.3) continue;
+                    cells.push({ x: ox + (i + 0.5) * CW, y: oy + (j + 0.5) * CH, r, h: 0, g: 0 });
+                }
+                draw();
+            }
+
+            function warm(x, y, rad) {
+                const r2 = rad * rad;
+                for (const c of cells) {
+                    const dx = c.x - x, dy = c.y - y, d2 = dx * dx + dy * dy;
+                    if (d2 >= r2) continue;
+                    const f = 1 - d2 / r2, v = f * f;
+                    if (v > c.h) c.h = v;
+                }
+            }
+
+            function draw() {
+                ctx.setTransform(k, 0, 0, k, 0, 0);
+                ctx.clearRect(0, 0, W, H);
+                ctx.fillStyle = ink;
+                // dots: full size when cold, gone by the time the glyph is solid
+                ctx.beginPath();
+                for (const c of cells) {
+                    const h = Math.max(c.h, c.g);
+                    const s = h <= 0.03 ? 1 : h >= 0.14 ? 0 : 1 - (h - 0.03) / 0.11;
+                    if (s <= 0) continue;
+                    const r = c.r * s;
+                    ctx.moveTo(c.x + r, c.y);
+                    ctx.arc(c.x, c.y, r, 0, 6.2832);
+                }
+                ctx.fill();
+                // glyphs, cool ones first then the hot bold ones (one font switch)
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                for (let pass = 0; pass < 2; pass++) {
+                    ctx.font = FONTS[pass];
+                    for (const c of cells) {
+                        const h = Math.min(1, Math.max(c.h, c.g));
+                        if (h < 0.08) continue;
+                        const t = (h - 0.08) / 0.92;
+                        if ((t > 0.84 ? 1 : 0) !== pass) continue;
+                        let x = c.x, y = c.y;
+                        if (has && c.h > 0.08) {
+                            // the wake leans toward the hand
+                            const dx = px - x, dy = py - y, d = Math.hypot(dx, dy) || 1;
+                            const m = Math.min(PULL * c.h * Math.max(0, 1 - d / (REACH * 2.2)), d * 0.5);
+                            x += dx / d * m; y += dy / d * m;
+                        }
+                        ctx.globalAlpha = Math.min(1, 0.4 + (h - 0.08) / 0.1);
+                        ctx.fillText(RAMP[Math.min(RAMP.length - 1, Math.floor(Math.pow(t, 1.45) * RAMP.length))], x, y);
+                    }
+                }
+                ctx.globalAlpha = 1;
+            }
+
+            function frame(now) {
+                raf = 0;
+                const dt = Math.min(0.05, Math.max(0.001, (now - last) / 1000));
+                last = now;
+                let live = false;
+
+                // cool
+                const keep = Math.exp(-dt / (TRAIL * 0.4));
+                for (const c of cells) {
+                    c.g = 0;
+                    if (c.h <= 0) continue;
+                    c.h = c.h * keep - dt * 0.04;
+                    if (c.h < 0.004) c.h = 0; else live = true;
+                }
+
+                // the arrival pass: a hand that isn't there
+                if (demo) {
+                    const t = (now - demo.t0) / demo.dur;
+                    if (t >= 1) { demo = null; has = false; }
+                    else if (t >= 0) {
+                        const e = t * t * (3 - 2 * t);
+                        const x = W * (0.2 + 0.6 * e), y = H * (0.3 + 0.3 * e + 0.06 * Math.sin(e * Math.PI * 2));
+                        if (!has) { lx = x; ly = y; speed = 0; }
+                        px = x; py = y; has = true;
+                    }
+                    live = true;
+                }
+
+                // warm along the path since the last frame, so a fast hand leaves no gaps
+                if (has) {
+                    const dist = Math.hypot(px - lx, py - ly);
+                    speed += (dist / dt - speed) * Math.min(1, dt * 9);
+                    const rad = REST + (REACH - REST) * Math.min(1, speed / 520);
+                    const steps = Math.max(1, Math.ceil(dist / 5));
+                    for (let n = 1; n <= steps; n++) warm(lx + (px - lx) * n / steps, ly + (py - ly) * n / steps, rad);
+                    lx = px; ly = py;
+                    live = true;
+                }
+
+                // rings: a crisp front with a short tail inside it
+                for (let n = rings.length - 1; n >= 0; n--) {
+                    const g = rings[n];
+                    g.age += dt;
+                    if (g.age > 1.05) { rings.splice(n, 1); continue; }
+                    const rad = 10 + g.age * 240, amp = Math.pow(1 - g.age / 1.05, 1.1);
+                    for (const c of cells) {
+                        const d = Math.hypot(c.x - g.x, c.y - g.y) - rad;
+                        if (d > 9 || d < -22) continue;
+                        const f = d > 0 ? 1 - d / 9 : 1 + d / 22, v = amp * f;
+                        if (v > c.g) c.g = v;
+                    }
+                    live = true;
+                }
+
+                draw();
+                if (live) raf = requestAnimationFrame(frame);
+            }
+            const kick = () => { if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+
+            const at = (e) => { const b = cv.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
+            const move = (e) => {
+                if (demo) { demo = null; has = false; }
+                const [x, y] = at(e);
+                if (!has) { lx = x; ly = y; speed = 0; }
+                px = x; py = y; has = true;
+                kick();
+            };
+            const leave = () => { if (demo) return; has = false; kick(); };
+            cv.addEventListener('pointerenter', move);
+            cv.addEventListener('pointermove', move);
+            cv.addEventListener('pointerleave', leave);
+            cv.addEventListener('pointercancel', leave);
+            cv.addEventListener('pointerdown', (e) => {
+                const [x, y] = at(e);
+                rings.push({ x, y, age: 0 });
+                kick();
+            });
+            cv.addEventListener('keydown', (e) => {
+                if (e.key !== 'Enter' && e.key !== ' ') return;
+                e.preventDefault();
+                rings.push({ x: W / 2, y: H / 2, age: 0 });
+                kick();
+            });
+            matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { ink = getComputedStyle(cv).color; draw(); });
+            new ResizeObserver(() => { const b = cv.getBoundingClientRect(); if (b.width !== W || b.height !== H) build(); }).observe(cv);
+
+            // once, on arrival: one pass across the portrait so it's clear it reacts
+            photo.addEventListener('load', () => {
+                build();
+                if (!calm.matches) { demo = { t0: performance.now() + 900, dur: 1300 }; kick(); }
+            });
+            photo.src = cv.dataset.src;
+        })();
+
+        // Easter egg: select the name, get a nod.
+        let named = false;
+        document.addEventListener('selectionchange', () => {
+            if (named) return;
+            const sel = String(document.getSelection() || '').trim();
+            if (sel !== 'Erik') return;
+            named = true;
+            console.log('%cthat\u2019s me.',
+                'color: #9a9590; font-size: 12px; font-style: italic; font-family: system-ui, -apple-system, sans-serif;');
+        });
+    </script>
+</body>
+</html>

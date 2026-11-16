@@ -1,0 +1,19 @@
+# Erik
+
+> Personal site of Erik, co-founder of Fluencify (https://fluencify.io), based in New York.
+
+## Who
+
+- Name: Erik
+- Work: Co-founder of Fluencify, with Sam and Isaac. Fluencify helps brands find out what content to make, gets it produced and published through 20,000+ creators, and analyses the results. Backed by byFounders, Wave and angels. Hiring: https://fluencify.io/labs/careers
+- Before: creator (900k+ followers on Instagram); co-founder of BrandPlant (2021–2024, exited).
+- Education: Stockholm School of Economics (BSc Business & Economics), KTH Royal Institute of Technology (Engineering Mathematics).
+- Contact: erik@fluencify.io
+- LinkedIn: https://www.linkedin.com/in/erik-romdhane-2149961b7/
+- GitHub: https://github.com/erikerkan
+
+## Pages
+
+- [About](/about/): bio and contact links.
+- [The Graveyard](/graveyard/): projects moved on from, each with a headstone.
+- [Side B](/sideb/): a record player and a wall of records.
